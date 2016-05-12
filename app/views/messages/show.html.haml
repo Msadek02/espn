@@ -7,3 +7,5 @@
     %p.message-desc= @message.description
     .links.btn-group
       = link_to "Back", root_path, class: "btn btn-default"
+      = link_to "Edit", edit_message_path(@message), class: "btn btn-primary"
+      = link_to "Delete", message_path, method: :delete, data: { confirm: "Are you sure?"}, class: "btn btn-danger"
